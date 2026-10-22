@@ -1,0 +1,34 @@
+GM INGENIEROS - SISTEMA DE PLANOS (LEEME PRIMERO)
+
+0) SI WINDOWS BLOQUEA LOS SCRIPTS (Zone.Identifier):
+   Un ZIP descargado en Windows marca todo lo que se extrae; con la
+   politica RemoteSigned eso bloquea los .ps1 con el mensaje
+   "no esta firmado digitalmente".
+   - Use siempre INICIAR_LOTE.cmd: el paquete quita solo la marca.
+   - Si aun asi aparece el error, ejecute DESBLOQUEAR.cmd (raiz).
+   - O desde la raiz: Get-ChildItem -Recurse -Filter *.ps1 | Unblock-File
+   - Mejor aun: antes de descomprimir el ZIP, clic derecho > Propiedades >
+     Desbloquear > Aplicar.
+   - NO ejecute tools\GM_LANZADOR_LOTE.ps1 directamente.
+
+1) LOTE AUTOMATICO: doble clic en INICIAR_LOTE.cmd
+   Pide CSV de entrada, DWG plantilla, carpeta de salida y AutoCAD.
+   Los DWG/PDF por codigo y los reportes quedan en la carpeta de salida.
+
+2) MARCAR ROLES EN UNA PLANTILLA: doble clic en ABRIR_PLANTILLA.cmd
+   Elija su DWG base: AutoCAD abre con todos los modulos ya cargados.
+   Comandos: GM_VALIDAR_PLANTILLA, GM_MARCAR_PLANTILLA, GM_MARCAR_ROL.
+   Guarde el DWG al terminar. No marque roles sobre la plantilla maestra
+   original: trabaje siempre sobre una copia.
+
+3) MANUAL COMPLETO: docs\MANUAL_USO.md
+   Especificacion de plantilla y roles: docs\SPEC_PLANTILLA_GM.md
+   Requisitos de recepcion: docs\REQUISITOS_PLANTILLA_GM.md
+
+No editar la carpeta lisp\ ni los archivos .lsp: el orden de carga vive en
+lisp\MANIFIESTO_MODULOS.txt y los sellos se validan al iniciar el lote.
+
+SALIDAS POR PROYECTO (SAL2): desde este paquete el lanzador lanza cada
+proyecto a proyectos\<nombre>\salida_<nombre> y no trae carpeta salida. El
+primer arranque crea la salida de cada proyecto; si la de otro proyecto no
+existe, se crea al abrirlo. La salida antigua NO se borra ni se mueve.

@@ -1,0 +1,31 @@
+# GM Ingenieros - orden de carga de modulos LISP (division PRY2 2026-10-13)
+# Formato: home|ruta_relativa
+#   home = archivo caratula (ancla) de la familia; ruta = fuente real del modulo.
+# El lanzador carga estas rutas en orden (tools/GM_LANZADOR_LOTE.ps1) y los
+# verificadores reconstruyen la fuente logica (tools/gm-src.cjs).
+# El orden preserva la precedencia historica: MENU, luego ubi, lay y gm.
+MENU_PLANOS.lsp|MENU_PLANOS.lsp
+PLANO_UBICACION.lsp|lisp/ubi/UBI_COMUN.lsp
+PLANO_UBICACION.lsp|lisp/ubi/UBI_BUSQUEDA.lsp
+PLANO_UBICACION.lsp|lisp/ubi/UBI_ESCALA.lsp
+PLANO_UBICACION.lsp|lisp/ubi/UBI_BASE.lsp
+PLANO_UBICACION.lsp|lisp/ubi/UBI_GRILLA.lsp
+PLANO_UBICACION.lsp|lisp/ubi/UBI_LIMPIEZA.lsp
+PLANO_UBICACION.lsp|lisp/ubi/UBI_FORMATO.lsp
+PLANO_UBICACION.lsp|lisp/ubi/UBI_VP.lsp
+PLANO_UBICACION.lsp|lisp/ubi/UBI_DCL.lsp
+LAYOUT_UBICACION.lsp|lisp/lay/LAY_COMUN.lsp
+LAYOUT_UBICACION.lsp|lisp/lay/LAY_LANDING.lsp
+LAYOUT_UBICACION.lsp|lisp/lay/LAY_ETIQUETAS.lsp
+LAYOUT_UBICACION.lsp|lisp/lay/LAY_ESQUEMAS.lsp
+LAYOUT_UBICACION.lsp|lisp/lay/LAY_COMANDOS.lsp
+AUTOMATIZACION.lsp|lisp/gm/GM_NUCLEO.lsp
+AUTOMATIZACION.lsp|lisp/gm/GM_REPORTE.lsp
+AUTOMATIZACION.lsp|lisp/gm/GM_GEO.lsp
+AUTOMATIZACION.lsp|lisp/gm/GM_LOTE.lsp
+AUTOMATIZACION.lsp|lisp/gm/GM_PLANTILLA.lsp
+AUTOMATIZACION.lsp|lisp/gm/GM_MIEMBRO.lsp
+AUTOMATIZACION.lsp|lisp/gm/GM_MODELO.lsp
+AUTOMATIZACION.lsp|lisp/gm/GM_ROTULO.lsp
+AUTOMATIZACION.lsp|lisp/gm/GM_TAREA.lsp
+AUTOMATIZACION.lsp|lisp/gm/GM_COMANDOS.lsp

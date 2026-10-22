@@ -1,0 +1,17 @@
+ESTA CARPETA ES INTERNA (tools).
+
+No ejecute los .ps1 de esta carpeta directamente: Windows puede bloquearlos
+por la marca de descarga (Zone.Identifier) y la politica RemoteSigned no los
+deja correr. Para iniciar el lote: vuelva a la raiz del paquete y haga
+doble clic en INICIAR_LOTE.cmd.
+
+Si aparece "no esta firmado digitalmente", ejecute DESBLOQUEAR.cmd en la
+raiz del paquete (o: Get-ChildItem -Recurse -Filter *.ps1 | Unblock-File).
+
+Herramientas de esta carpeta:
+  GM_LANZADOR_LOTE.ps1    lanzador del lote (lo llama INICIAR_LOTE.cmd)
+  GM_ABRIR_PLANTILLA.ps1  abre AutoCAD con los modulos cargados
+
+Esta carpeta trae SOLO esas dos herramientas. Los convertidores de padron
+(XLSX a CSV) y las sondas de simbolos son herramientas internas de GM y
+no se entregan al cliente.
